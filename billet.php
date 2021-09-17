@@ -1,14 +1,15 @@
 <?php
 class Billet
 {
- private int $_id; 
- private string $_titreBillet; 
- private string $_contenuBillet; 
- static private $_nbObjects=0; 
- 
- public function __construct($tab){
+    private int $_id; 
+    private string $_titreBillet; 
+    private string $_contenuBillet; 
+    
+    public function __construct(array $tab)
+    {
         $this->hydrate($tab);
     }
+
     public function hydrate(array $donnees) {
         foreach ($donnees as $key => $value) {
             // On fabrique le nom du setter correspondant à l'attribut :
