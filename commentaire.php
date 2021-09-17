@@ -1,27 +1,27 @@
 <?php
 class Commentaire
 {
- private int $_id; 
- private int $_idBillet; 
- private string $_auteur; 
- private string $_commentaire; 
- private string $_dateCommentaire; 
+    private int $_id; 
+    private int $_idBillet; 
+    private string $_auteur; 
+    private string $_commentaire; 
+    private string $_dateCommentaire; 
 
   
- public function __construct($tabcomm){
-        $this->hydrate($tabcomm);
-    }
-    public function hydrate(array $donnees) {
-        foreach ($donnees as $key => $value) {
-            // On fabrique le nom du setter correspondant à l'attribut :
-            $setter = 'set'.ucfirst($key);
-        // Si le setter correspondant existe :
-            if (method_exists($this, $setter)) {
-                // On appelle le setter = $setter contient son nom !!!
-                $this->$setter($value);
+    public function __construct($tabcomm){
+            $this->hydrate($tabcomm);
+        }
+        public function hydrate(array $donnees) {
+            foreach ($donnees as $key => $value) {
+                // On fabrique le nom du setter correspondant à l'attribut :
+                $setter = 'set'.ucfirst($key);
+            // Si le setter correspondant existe :
+                if (method_exists($this, $setter)) {
+                    // On appelle le setter = $setter contient son nom !!!
+                    $this->$setter($value);
+                    }
                 }
-            }
-       }
+        }
 
     // setters   
 

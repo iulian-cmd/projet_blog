@@ -7,25 +7,18 @@ spl_autoload_register('requireClass');
 function requireClass($classe){
     require $classe . '.php';
     }
-// comme settings n'est pas une classe elle n'est pas inclue par la autoload
-include ('settings.php');
 
-// *****************************************
-// connection a la BDD
 
-//attr_errmode affiche bien les erreurs
-try {
-    $bdd = new PDO('mysql:host=localhost:3307;dbname=blogphp;charset=utf8',$user,$pass,array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-} catch (Exception $e) {
-    die('Erreur : Il faut reessayer' . $e->getMessage());
-}
-// ***********************************************
 
-// $billetm = new BilletManager($bdd);
+$billetm = new BilletManager($pdo);
+
 // var_dump($billetm->getList());
 // var_dump($billetm->getCount());
+var_dump($billet->getAll());
 
-$commentairem = new CommentaireManager($bdd);
+$commentairem = new CommentaireManager($pdo);
 // var_dump($commentairem->getListComm());
-var_dump($commentairem->getListLinkedComm(1));
+// var_dump($commentairem->getListLinkedComm(1));
+
+
 ?>

@@ -2,9 +2,9 @@
 
 
 // create la classe BilletManager qui connecte qvec la pdo
-class CommentaireManager
+class CommentaireManager extends EntityManager
 {
- private $pdo; // Instance de PDO.
+ public $pdo; // Instance de PDO.
 
  public function __construct(PDO $pdo) {    // PDO ici c'est pour 'typer' l'instance
     $this->pdo = $pdo;

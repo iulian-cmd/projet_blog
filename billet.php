@@ -7,21 +7,23 @@ class Billet
     
     public function __construct(array $tab)
     {
-        $this->hydrate($tab);
+        $this->id = $tab['id'];
+        $this->id = $tab['titreBillet'];
+        $this->id = $tab['contenuBillet'];
     }
 
-    public function hydrate(array $donnees) {
-        foreach ($donnees as $key => $value) {
-            // On fabrique le nom du setter correspondant à l'attribut :
-            $setter = 'set'.ucfirst($key);
-        // Si le setter correspondant existe :
-            if (method_exists($this, $setter)) {
-                // On appelle le setter = $setter contient son nom !!!
-                $this->$setter($value);
-                }
-            }
-       }
-
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function getTitreBillet()
+    {
+        return $this->titreBillet;
+    }
+    public function getContenuBillet()
+    {
+        return $this->contenuBillet;
+    }
     // setters   
     private function setId($id) {
         $this->_id = $id;
