@@ -1,9 +1,9 @@
 <?php
 class Billet
 {
- private int $_id; // La force du personnage, par défaut 50
-  private string $_titreBillet; // Son expérience
- private string $_contenuBillet; // Ses dégâts
+ private int $_id; 
+ private string $_titreBillet; 
+ private string $_contenuBillet; 
  static private $_nbObjects=0; 
  
  public function __construct($tab){

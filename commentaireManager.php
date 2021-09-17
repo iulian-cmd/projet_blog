@@ -1,7 +1,7 @@
 <?php
 
 
-// create la classe BilletManager qui connecte qvec lq BDD
+// create la classe BilletManager qui connecte qvec la BDD
 class CommentaireManager
 {
  private $bdd; // Instance de PDO.

@@ -1,11 +1,11 @@
 <?php
 class Commentaire
 {
- private int $_id; // La force du personnage, par défaut 50
- private int $_idBillet; // La force du personnage, par défaut 50
- private string $_auteur; // Son expérience
- private string $_commentaire; // Ses dégâts
- private string $_dateCommentaire; // Ses dégâts
+ private int $_id; 
+ private int $_idBillet; 
+ private string $_auteur; 
+ private string $_commentaire; 
+ private string $_dateCommentaire; 
 
   
  public function __construct($tabcomm){
